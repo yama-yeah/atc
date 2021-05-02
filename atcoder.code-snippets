@@ -40,7 +40,7 @@
 			"typedef long long ll;",
 			"typedef long double ld;",
 			"template<class... T>void input(T&... a){(cin >> ... >> a);}",
-			"template<class... T>void print(T ...a){(cout<<...<<a);}",
+			"template<class T, class... Ts>void print(const T& a, const Ts&... b){cout << a;(cout << ... << (cout << ' ', b));cout << '\n';}",
 			"int main()",
 			"{",
 			"    return 0;",
