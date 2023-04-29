@@ -74,6 +74,7 @@
 			"template<class T,class T2>void npk(T &a,T2 &b,int k){T2 c,d;nck(a,c,k);rep(typeof(c.at(0))& i:c){npn(i,d);rep(typeof(d.at(0))& j:d){b.pb(j);}}}",
 			"template<class T,class T2>void nck(T a,T2& b,int k){vec(int,indices,k);int s_i=0;int s=0;while(s>=0){rep(i,s_i,sz(a)){indices[s++]=i;if(s==k){T comb;rep(x,k){comb.pb(a[indices[x]]);}b.pb(comb);break;}}--s;if(s<0)break;s_i=indices[s]+1;}}",
 			"int counts(string &s,string t){int c=0,l=sz(s),tl=sz(t),r=0;rep(i,l){if(s[i]==t[c]){c++;}else{c=0;}if(c==tl){r++;c=0;}}return r;}",
+			"vector<long long> sieve(int MAXP){vector<long long> res;vector<int> mem(MAXP,0);for(int i=2;i<MAXP;i++){if(mem[i]){continue;}res.push_back(i);for(int j=i;j<MAXP;j+=i){mem[j]=1;}}return res;}",
 			"#define Max(a,...) a=max(a,__VA_ARGS__)",
 			"#define Min(a,...) a=max(a,__VA_ARGS__)",
 			"#define Npn(a,name) vec(typeof(a),name); npn(a,name)",
@@ -95,4 +96,3 @@
         "description": "template"
     }
 }
-
